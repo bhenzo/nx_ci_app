@@ -23,6 +23,6 @@ jobs:
       - name: Cerrando Servidor NODE
         run: pkill -f node || true
 
-      - name: Run gunicorn
+      - name: Coping files
         run: |
-          mv dist /home/bhenzo/apps/nx_ci
+          mv dist /home/bhenzo/apps/nx_ci >  /home/bhenzo/apps/deploy_log.txt
