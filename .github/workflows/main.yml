@@ -26,3 +26,5 @@ jobs:
       - name: Coping files
         run: |
           mv dist /home/bhenzo/apps/nx_ci >  /home/bhenzo/apps/deploy_log.txt
+          cd /home/bhenzo/apps/nx_ci/dist/app 
+          nohup node main.js > /dev/null 2>&1 &
